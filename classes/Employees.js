@@ -7,7 +7,7 @@ class Employees {
     this.position = position;
     this.#salary = salary;
     this.#isHired = true;
-    // this.#allEmployees.push(Employees);
+    Employees.#allEmployees.push(this);
   }
 
   getSalary() {
@@ -32,6 +32,10 @@ class Employees {
 
   static getEmployees() {
     return Employees.#allEmployees;
+  }
+
+  static getTotalPayroll() {
+    return Employees.#allEmployees.reduce((acc, employee) => acc + employee.getSalary(), 0)
   }
 }
 
