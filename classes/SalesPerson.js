@@ -1,10 +1,3 @@
-class SalesPerson {
+class SalesPerson {}
 
-
-
-    
-}
-
-module.exports = {
-    SalesPerson,
-}
+module.exports = SalesPerson;
